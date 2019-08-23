@@ -25,7 +25,7 @@ let brickOffsetLeft = 30;
 const bricks = [];
 for (let c = 0; c < brickColumnCount; c++) {
   bricks[c] = [];
-  for (var r = 0; r < brickRowCount; r++) {
+  for (let r = 0; r < brickRowCount; r++) {
     bricks[c][r] = { x: 0, y: 0, status: true };
   }
 }
@@ -60,7 +60,7 @@ function keyUpHandler(e) {
 function collisionDetection() {
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
+      let b = bricks[c][r];
       if (b.status) {
         if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
           dy = -dy;
@@ -153,4 +153,4 @@ function draw() {
   y += dy;
 }
 
-var interval = setInterval(draw, 10);
+let interval = setInterval(draw, 10);
