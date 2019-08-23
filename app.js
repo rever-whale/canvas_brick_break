@@ -66,7 +66,7 @@ function drawBricks () {
       bricks[c][r].x = brickX;
       bricks[c][r].y = brickY;
       ctx.beginPath();
-      ctx.rect(brickY, brickY, brickWidth, brickHeight);
+      ctx.rect(brickX, brickY, brickWidth, brickHeight);
       ctx.fillStyle = '#0095DD';
       ctx.fill();
       ctx.closePath();
